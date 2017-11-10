@@ -1,4 +1,4 @@
-﻿namespace ReportingTool.Framework.Lib.PolicyInjection
+﻿namespace PolicyInjectionSample.Framework.Lib.PolicyInjection
 {
     using System.Collections.Generic;
 

@@ -1,7 +1,7 @@
-﻿namespace ReportingTool.App.PolicyInjectionConfig.Event
+﻿namespace PolicyInjectionSample.App.PolicyInjectionConfig.Event
 {
     using System;
-    using ReportingTool.Framework.Lib.PolicyInjection;
+    using PolicyInjectionSample.Framework.Lib.PolicyInjection;
 
     public class ExamplePolicyInvokingEvent : IPolicyEvent
     {

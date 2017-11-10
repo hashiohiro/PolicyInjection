@@ -5,3 +5,10 @@ c:\users\hashi\source\repos\PolicyInjection\PolicyInjection\obj\Debug\PolicyInje
 c:\users\hashi\source\repos\PolicyInjection\PolicyInjection\obj\Debug\PolicyInjectionSample.csproj.CoreCompileInputs.cache
 c:\users\hashi\source\repos\PolicyInjection\PolicyInjection\obj\Debug\PolicyInjection.exe
 c:\users\hashi\source\repos\PolicyInjection\PolicyInjection\obj\Debug\PolicyInjection.pdb
+C:\Users\hashi\OneDrive\ドキュメント\PolicyInjection\PolicyInjection\PolicyInjection\bin\Debug\PolicyInjection.exe.config
+C:\Users\hashi\OneDrive\ドキュメント\PolicyInjection\PolicyInjection\PolicyInjection\bin\Debug\PolicyInjection.exe
+C:\Users\hashi\OneDrive\ドキュメント\PolicyInjection\PolicyInjection\PolicyInjection\bin\Debug\PolicyInjection.pdb
+C:\Users\hashi\OneDrive\ドキュメント\PolicyInjection\PolicyInjection\PolicyInjection\obj\Debug\PolicyInjectionSample.csprojResolveAssemblyReference.cache
+C:\Users\hashi\OneDrive\ドキュメント\PolicyInjection\PolicyInjection\PolicyInjection\obj\Debug\PolicyInjectionSample.csproj.CoreCompileInputs.cache
+C:\Users\hashi\OneDrive\ドキュメント\PolicyInjection\PolicyInjection\PolicyInjection\obj\Debug\PolicyInjection.exe
+C:\Users\hashi\OneDrive\ドキュメント\PolicyInjection\PolicyInjection\PolicyInjection\obj\Debug\PolicyInjection.pdb

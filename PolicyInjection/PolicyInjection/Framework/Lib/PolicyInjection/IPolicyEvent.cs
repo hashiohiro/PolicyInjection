@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ReportingTool.Framework.Lib.PolicyInjection
+﻿namespace PolicyInjectionSample.Framework.Lib.PolicyInjection
 {
+    using System;
+
     public interface IPolicyEvent
     {
         ExecuteTiming GetExecuteTiming();

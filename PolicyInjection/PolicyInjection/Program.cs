@@ -2,8 +2,8 @@
 {
     using System;
     using System.Collections.Generic;
-    using ReportingTool.App.PolicyInjectionConfig.Policy;
-    using ReportingTool.Framework.Lib.PolicyInjection;
+    using PolicyInjectionSample.App.PolicyInjectionConfig.Policy;
+    using PolicyInjectionSample.Framework.Lib.PolicyInjection;
 
     class Program
     {

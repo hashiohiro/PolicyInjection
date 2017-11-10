@@ -1,8 +1,8 @@
-﻿namespace ReportingTool.App.PolicyInjectionConfig.Policy
+﻿namespace PolicyInjectionSample.App.PolicyInjectionConfig.Policy
 {
     using System.Collections.Generic;
-    using ReportingTool.Framework.Lib.PolicyInjection;
-    using ReportingTool.App.PolicyInjectionConfig.Event;
+    using PolicyInjectionSample.Framework.Lib.PolicyInjection;
+    using PolicyInjectionSample.App.PolicyInjectionConfig.Event;
 
     public class ExamplePolicy : PolicyBase
     {
