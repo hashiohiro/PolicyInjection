@@ -1,0 +1,7 @@
+c:\users\hashi\source\repos\PolicyInjection\PolicyInjection\bin\Debug\PolicyInjection.exe.config
+c:\users\hashi\source\repos\PolicyInjection\PolicyInjection\bin\Debug\PolicyInjection.exe
+c:\users\hashi\source\repos\PolicyInjection\PolicyInjection\bin\Debug\PolicyInjection.pdb
+c:\users\hashi\source\repos\PolicyInjection\PolicyInjection\obj\Debug\PolicyInjectionSample.csprojResolveAssemblyReference.cache
+c:\users\hashi\source\repos\PolicyInjection\PolicyInjection\obj\Debug\PolicyInjectionSample.csproj.CoreCompileInputs.cache
+c:\users\hashi\source\repos\PolicyInjection\PolicyInjection\obj\Debug\PolicyInjection.exe
+c:\users\hashi\source\repos\PolicyInjection\PolicyInjection\obj\Debug\PolicyInjection.pdb
