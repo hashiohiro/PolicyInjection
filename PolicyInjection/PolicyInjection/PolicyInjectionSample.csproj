@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -42,11 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App\PolicyInjectionConfig\Event\ExampleAttributeUsePolicy\ExampleAttributeUsePolicyAllEvent.cs" />
+    <Compile Include="App\PolicyInjectionConfig\Event\ExampleAttributeUsePolicy\ExampleAttributeUsePolicyInvokedEven.cs" />
+    <Compile Include="App\PolicyInjectionConfig\Event\ExampleAttributeUsePolicy\ExampleAttributeUsePolicyInvokeEvent.cs" />
+    <Compile Include="App\PolicyInjectionConfig\Event\ExampleAttributeUsePolicy\ExampleAttributeUsePolicyInvokingEvent.cs" />
     <Compile Include="App\PolicyInjectionConfig\Event\ExamplePolicy\ExamplePolicyAllEvent.cs" />
     <Compile Include="App\PolicyInjectionConfig\Event\ExamplePolicy\ExamplePolicyInvokedEvent.cs" />
     <Compile Include="App\PolicyInjectionConfig\Event\ExamplePolicy\ExamplePolicyInvokeEvent.cs" />
     <Compile Include="App\PolicyInjectionConfig\Event\ExamplePolicy\ExamplePolicyInvokingEvent.cs" />
+    <Compile Include="App\PolicyInjectionConfig\Policy\ExampleAttributeUsePolicy.cs" />
     <Compile Include="App\PolicyInjectionConfig\Policy\ExamplePolicy.cs" />
+    <Compile Include="Framework\Lib\PolicyInjection\ApplyPolicyAttribute.cs" />
+    <Compile Include="Framework\Lib\PolicyInjection\BindPolicyEventAttribute.cs" />
     <Compile Include="Framework\Lib\PolicyInjection\IPolicy.cs" />
     <Compile Include="Framework\Lib\PolicyInjection\IPolicyEvent.cs" />
     <Compile Include="Framework\Lib\PolicyInjection\PolicyInjection.cs" />
@@ -55,6 +63,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Framework\Lib\Logging\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

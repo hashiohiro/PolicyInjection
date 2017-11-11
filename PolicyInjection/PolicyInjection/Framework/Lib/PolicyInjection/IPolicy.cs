@@ -1,5 +1,6 @@
 ﻿namespace PolicyInjectionSample.Framework.Lib.PolicyInjection
 {
+    using System;
     using System.Collections.Generic;
 
     public interface IPolicy
@@ -14,7 +15,16 @@
     /// </summary>
     public abstract class PolicyBase : IPolicy
     {
-        abstract public IEnumerable<IPolicyEvent> Events();
+        public virtual IEnumerable<IPolicyEvent> Events()
+        {
+            var attrDataList = GetType().GetCustomAttributes(false);
+
+            foreach (var attr in attrDataList)
+            {
+                if (attr.GetType() == typeof(BindPolicyEventAttribute))
+                    yield return (IPolicyEvent)Activator.CreateInstance((attr as BindPolicyEventAttribute).EventType);
+            }
+        }
 
         /// <summary>
         /// ハンドラの実行タイミングを受け取り、実行可能なハンドラを持つイベントのリストを取得する

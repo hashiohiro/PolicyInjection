@@ -9,16 +9,58 @@
 
     public class PolicyInjection
     {
-        public object GetProxy<T>(List<Type> applyPolicies)
+        public PolicyInjection(Assembly attributeResolveTarget)
         {
-            return new ApplyPolicyProxy<T>(applyPolicies).GetTransparentProxy();
+            AttributeResolveTarget = attributeResolveTarget;
+        }
+
+        /// <summary>
+        /// PolicyAttributeの探索範囲
+        /// </summary>
+        public Assembly AttributeResolveTarget { get; private set; }
+
+        /// <summary>
+        /// 与えられたポリシーを対象クラスに注入する。
+        /// </summary>
+        /// <typeparam name="T">対象クラス</typeparam>
+        /// <param name="applyPolicies">注入するポリシーのリスト</param>
+        /// <returns>透過プロキシ</returns>
+        public T InjectByTypeList<T>(List<Type> applyPolicies)
+        {
+            return (T)new ApplyPolicyProxy<T>(applyPolicies).GetTransparentProxy();
+        }
+
+        /// <summary>
+        /// カスタムアトリビュートによって与えられたポリシーを対象クラスに注入する。
+        /// </summary>
+        /// <typeparam name="T">対象クラス</typeparam>
+        /// <returns>透過プロキシ</returns>
+        public T InjectByAttribute<T>()
+        {
+            return (T) InjectByTypeList<T>(ApplyPoliciesListByAttribute(typeof(T)).ToList());
+        }
+
+        /// <summary>
+        /// 対象クラスに付与されたApplyPolicyアトリビュートを列挙する。
+        /// </summary>
+        /// <param name="applyTargetClass">対象クラス</param>
+        /// <returns>ApplyPolicyアトリビュートのリスト</returns>
+        protected IEnumerable<Type> ApplyPoliciesListByAttribute(Type applyTargetClass)
+        {
+            var attrs = applyTargetClass.GetCustomAttributes(false);
+            foreach (var atr in attrs)
+            {
+                if (atr.GetType() == typeof(ApplyPolicyAttribute))
+                    yield return (atr as ApplyPolicyAttribute).PolicyType;
+
+            }
         }
     }
 
     /// <summary>
     /// ポリシーを適用するためのプロキシ。
     /// </summary>
-    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="T">プロキシが内包するクラスの型</typeparam>
     public class ApplyPolicyProxy<T> : RealProxy
     {
         public ApplyPolicyProxy(List<Type> applyPolicies)

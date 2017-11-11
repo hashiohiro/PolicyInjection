@@ -7,9 +7,13 @@
     public class ExamplePolicy : PolicyBase
     {
         /// <summary>
-        /// ExamplePolicyに紐づけるPolicyEventのインスタンスを列挙する。
+        /// ポリシーに紐づけるイベントを列挙する。
         /// </summary>
-        /// <returns></returns>
+        /// <remarks>
+        /// BindPolicyEventアトリビュートを使わず、
+        /// イベントをバインドする場合はEvents()をオーバーライドする。
+        /// </remarks>
+        /// <returns>イベントインスタンスのリスト</returns>
         public override IEnumerable<IPolicyEvent> Events()
         {
             return new List<IPolicyEvent>()
